@@ -34,7 +34,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Setup Keystore (if secrets provided)
+      - name: Setup Keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -49,9 +49,17 @@ jobs:
           keyAlias=$KEY_ALIAS
           keyPassword=$KEY_PASSWORD
           EOF
-            echo "Keystore restored successfully."
+            echo "Production keystore restored from secrets."
           else
-            echo "No signing secret found; building with fallback signing."
+            echo "No production keystore secrets found; generating self-signed CI keystore for release."
+            keytool -genkeypair -v -keystore kidloop-release-key.jks -alias kidloop -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=KidLoop CI, OU=KidLoop, O=KidLoop, L=Unknown, S=Unknown, C=US"
+            cat <<EOF > keystore.properties
+          storeFile=kidloop-release-key.jks
+          storePassword=android
+          keyAlias=kidloop
+          keyPassword=android
+          EOF
+            echo "CI keystore created successfully."
           fi
 
       - name: Build Release APK and Bundle
