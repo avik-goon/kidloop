@@ -1,0 +1,9 @@
+<!-- KidLoop Agent Rules -->
+Always refer to AGENTS.md for architecture, security non-negotiables, and coding conventions.
+
+## Key Directives
+1. Strict YouTube ToS compliance: embedded IFrame Player only, no scrapers.
+2. Toddler safety: never degrade Screen Pinning (`startLockTask()`), TouchLockOverlay, or HiddenUnlockCorner.
+3. No hardcoded strings: always use `app/src/main/res/values/strings.xml`.
+4. Run `./gradlew testDebugUnitTest` to verify all changes.
+5. Use code-review-graph MCP tools for structural queries and impact analysis.
