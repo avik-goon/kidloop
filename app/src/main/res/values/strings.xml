@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidLoop</string>
+
+    <!-- General Actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_add">Add</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_done">Done</string>
+    <string name="action_ok">OK</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_retry">Retry Now</string>
+    <string name="action_got_it">Got It</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_move_up">Move Up</string>
+    <string name="action_move_down">Move Down</string>
+    <string name="action_launch_kid_mode">Start Kid Mode</string>
+    <string name="action_clear">Clear</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">KidLoop Parent Settings</string>
+    <string name="settings_section_playlist">Video Playlist</string>
+    <string name="settings_add_link_button">Add YouTube Link</string>
+    <string name="settings_empty_playlist">No videos configured. Add YouTube video or playlist links to begin looping.</string>
+    <string name="settings_section_security">Parent Security</string>
+    <string name="settings_change_pin">Change Parent PIN</string>
+    <string name="settings_setup_pin">Set Parent PIN</string>
+    <string name="settings_pin_configured">PIN is set and protected</string>
+    <string name="settings_section_limits">Screen Time Limits</string>
+    <string name="settings_session_limit">Session limit: %1$d minutes</string>
+    <string name="settings_daily_limit">Daily total limit: %1$d minutes</string>
+    <string name="settings_today_usage">Today\'s usage: %1$d of %2$d minutes</string>
+    <string name="settings_reset_today">Reset Today\'s Usage</string>
+    <string name="settings_reset_confirm_title">Reset Today\'s Usage?</string>
+    <string name="settings_reset_confirm_message">This resets screen time used today back to 0 minutes.</string>
+    <string name="settings_section_hardware">Hardware &amp; Audio</string>
+    <string name="settings_allow_volume_keys">Allow Physical Volume Keys</string>
+    <string name="settings_allow_volume_description">When enabled, volume up/down buttons adjust media volume during Kid Mode.</string>
+    <string name="settings_validation_no_videos">Please add at least one YouTube video or playlist before starting.</string>
+    <string name="settings_validation_no_pin">Please configure a Parent PIN before starting Kid Mode.</string>
+    <string name="settings_daily_exhausted">Daily screen time limit of %1$d minutes has been reached for today! Reset usage in settings or wait until tomorrow.</string>
+
+    <!-- Add Link Dialog -->
+    <string name="dialog_add_link_title">Add YouTube Link</string>
+    <string name="dialog_add_link_hint">Paste URL (e.g. youtube.com/watch?v=... or youtu.be/...)</string>
+    <string name="dialog_add_link_title_hint">Optional title (e.g. Nursery Rhymes)</string>
+    <string name="dialog_add_link_invalid">Invalid YouTube URL. Please check the link and try again.</string>
+    <string name="dialog_add_link_type_video">Video</string>
+    <string name="dialog_add_link_type_playlist">Playlist</string>
+
+    <!-- PIN Setup Dialog -->
+    <string name="pin_setup_title_create">Create Parent PIN</string>
+    <string name="pin_setup_title_change">Change Parent PIN</string>
+    <string name="pin_setup_new_pin">Enter new PIN (4–6 digits):</string>
+    <string name="pin_setup_confirm_pin">Confirm PIN:</string>
+    <string name="pin_setup_mismatch">PINs do not match. Please try again.</string>
+    <string name="pin_setup_length_error">PIN must be between 4 and 6 digits.</string>
+
+    <!-- Hidden Unlock & PIN Entry Dialog -->
+    <string name="pin_unlock_title">Parent Unlock</string>
+    <string name="pin_unlock_prompt">Enter PIN to exit Kid Mode:</string>
+    <string name="pin_unlock_error">Incorrect PIN. %1$d attempts remaining.</string>
+    <string name="pin_unlock_locked">Too many attempts. Locked for %1$d seconds.</string>
+    <string name="pin_unlock_auto_dismiss">Closing in %1$d s</string>
+
+    <!-- Screen Pinning Explanation Screen -->
+    <string name="explanation_title">Locking Device for Toddler</string>
+    <string name="explanation_body">KidLoop keeps your toddler safely inside this playlist by locking navigation buttons and gestures using Android Screen Pinning.\n\n• When you tap Launch, Android will request permission to pin this screen.\n• Tap "Got it" or "OK" on the system prompt.\n• Touch taps on the screen are completely blocked.\n• Swipe Up goes to the next video, Swipe Down goes to the previous video.\n• To exit Kid Mode: Long-press the hidden top-right corner of the screen for 3 seconds.</string>
+    <string name="explanation_warning_unpinned">Screen Pinning was not confirmed by the system. KidLoop will still shield touches, but for maximum toddler lock, please confirm Screen Pinning.</string>
+
+    <!-- Kid Player Overlays -->
+    <string name="player_content_desc">Looping Video Player</string>
+    <string name="player_touch_overlay_desc">Touch lock surface</string>
+    <string name="hidden_unlock_desc">Parent unlock trigger</string>
+
+    <!-- Time's Up Screen -->
+    <string name="time_up_title">Time for a Break!</string>
+    <string name="time_up_subtitle">You have had wonderful screen time. Now it\'s time to rest your eyes and play!</string>
+    <string name="time_up_parent_hint">Parent: Long-press top-right corner to unlock</string>
+
+    <!-- All Videos Failed Screen -->
+    <string name="error_all_failed_title">Ask a Parent</string>
+    <string name="error_all_failed_subtitle">None of the videos in your playlist could be played. They may be private, restricted, or removed.</string>
+    <string name="error_parent_hint">Parent: Long-press top-right corner to edit playlist</string>
+
+    <!-- Offline Screen -->
+    <string name="offline_title">No Internet Connection</string>
+    <string name="offline_subtitle">KidLoop needs an active internet connection to stream videos. Retrying automatically in %1$d seconds…</string>
+</resources>
